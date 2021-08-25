@@ -21,7 +21,7 @@ public class OrderController {
         rabbitTemplate.convertAndSend(RabbitMQConfiguration.topicExchangeName,
                 "pizza-key", "Vegetable special");
 
-        return "Thank you for your order " + orderId;
+        return "Thank you for your order. Your order key: " + orderId;
     }
 
 }
